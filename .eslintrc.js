@@ -7,22 +7,12 @@ module.exports = {
     },
   },
   settings: {
-    react: {
-      version: '17.0.2',
-    },
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
       typescript: {
         alwaysTryTypes: true,
-      },
-      alias: {
-        map: [
-          ['@', './src'],
-          ['@services', './src/services'],
-        ],
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
   },
@@ -107,6 +97,14 @@ module.exports = {
     // conflict with dprint-integration/dprint, will make some line disappear, and some line duplicated
     '@typescript-eslint/consistent-type-imports': 'off',
   },
+  overrides: [
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
   extends: [
     'eslint:recommended',
     'standard',
