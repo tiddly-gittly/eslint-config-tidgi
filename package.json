@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tidgi",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Eslint config fot TidGi and its plugins, with many eslint plugins to perform auto-fix.",
   "homepage": "https://github.com/tiddly-gittly/eslint-config-tidgi",
   "bugs": "https://github.com/tiddly-gittly/eslint-config-tidgi/issues",
@@ -33,7 +33,6 @@
     "eslint-plugin-autofix": "^1.1.0",
     "eslint-plugin-dprint-integration": "^0.3.0",
     "eslint-plugin-html": "7.1.0",
-    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "^6.1.1",
@@ -47,6 +46,7 @@
   },
   "devDependencies": {
     "eslint-find-rules": "^4.1.0",
+    "eslint-plugin-import": "npm:eslint-plugin-i@2.27.5-2",
     "typescript": "^5"
   },
   "peerDependencies": {

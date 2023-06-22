@@ -7,6 +7,9 @@ module.exports = {
     },
   },
   settings: {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -17,6 +20,8 @@ module.exports = {
     },
   },
   rules: {
+    // fix https://github.com/import-js/eslint-import-resolver-typescript/issues/197#issuecomment-1435530855
+    'import/no-unresolved': [2, { ignore: ['\\$:/'] }],
     'unicorn/prevent-abbreviations': [
       'error',
       {
