@@ -19,7 +19,6 @@
     "typescript"
   ],
   "scripts": {
-    "prepublishOnly": "only-allow-pnpm",
     "check": "eslint-find-rules --unused index.js"
   },
   "dependencies": {
