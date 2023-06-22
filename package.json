@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-tidgi",
-  "version": "2.24.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Eslint config fot TidGi and its plugins, with many eslint plugins to perform auto-fix.",
   "homepage": "https://github.com/tiddly-gittly/eslint-config-tidgi",
   "bugs": "https://github.com/tiddly-gittly/eslint-config-tidgi/issues",
   "main": "index.js",
@@ -11,10 +11,12 @@
   },
   "license": "MIT",
   "keywords": [
-    "react",
-    "framework",
-    "modern",
-    "modern.js"
+    "eslint",
+    "tiddlywiki",
+    "tidgi",
+    "tiddlywiki-plugin",
+    "tiddlywiki5",
+    "typescript"
   ],
   "scripts": {
     "prepublishOnly": "only-allow-pnpm",
