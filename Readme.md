@@ -1,0 +1,1 @@
+# ESlint Config TidGi
