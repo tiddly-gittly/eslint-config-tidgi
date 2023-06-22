@@ -22,8 +22,8 @@
     "check": "eslint-find-rules --unused index.js"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.59.11",
-    "@typescript-eslint/parser": "5.59.11",
+    "@typescript-eslint/eslint-plugin": "5.60.0",
+    "@typescript-eslint/parser": "5.60.0",
     "dprint": "^0.37.1",
     "eslint": "8.43.0",
     "eslint-config-standard": "^17.1.0",
@@ -46,7 +46,6 @@
     "eslint-plugin-unused-imports": "^2.0.0"
   },
   "devDependencies": {
-    "@scripts/build": "workspace:*",
     "eslint-find-rules": "^4.1.0",
     "typescript": "^5"
   },
