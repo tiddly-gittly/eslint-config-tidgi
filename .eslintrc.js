@@ -1,12 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const tsEslintConfig = require('./tsconfig.eslint.json');
-
 module.exports = {
-  ignorePatterns: tsEslintConfig.exclude,
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.eslint.json',
-    tsconfigRootDir: __dirname,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
