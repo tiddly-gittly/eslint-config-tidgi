@@ -65,7 +65,7 @@ module.exports = {
         },
       },
     ],
-    'comma-dangle': [2, 'always-multiline'],
+    'comma-dangle': 'off',
     'no-undef': 'off',
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-await-expression-member': 'off',
