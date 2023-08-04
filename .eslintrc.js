@@ -103,6 +103,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': 'off',
     // in tw env, only `domNode?.parentNode?.removeChild(domNode);` will work, if use `domNode?.remove()`, it will throw error in tw env
     'unicorn/prefer-dom-node-remove': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
   overrides: [
     {
