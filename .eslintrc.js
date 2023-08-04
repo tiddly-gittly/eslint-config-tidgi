@@ -101,6 +101,8 @@ module.exports = {
     ],
     // conflict with dprint-integration/dprint, will make some line disappear, and some line duplicated
     '@typescript-eslint/consistent-type-imports': 'off',
+    // in tw env, only `domNode?.parentNode?.removeChild(domNode);` will work, if use `domNode?.remove()`, it will throw error in tw env
+    'unicorn/prefer-dom-node-remove': 'off',
   },
   overrides: [
     {
