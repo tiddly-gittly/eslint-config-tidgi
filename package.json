@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tidgi",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Eslint config fot TidGi and its plugins, with many eslint plugins to perform auto-fix.",
   "homepage": "https://github.com/tiddly-gittly/eslint-config-tidgi",
   "bugs": "https://github.com/tiddly-gittly/eslint-config-tidgi/issues",
