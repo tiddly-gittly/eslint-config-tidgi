@@ -1,3 +1,5 @@
+const pluginSecurity = require('eslint-plugin-security');
+
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -52,24 +54,9 @@ module.exports = {
     '@typescript-eslint/method-signature-style': 'off',
     'unicorn/prefer-string-slice': 'off',
     'unicorn/no-array-reduce': 'off',
-    '@typescript-eslint/member-delimiter-style': [
-      'warn',
-      {
-        multiline: {
-          delimiter: 'semi', // 'none' or 'semi' or 'comma'
-          requireLast: true,
-        },
-        singleline: {
-          delimiter: 'semi', // 'semi' or 'comma'
-          requireLast: false,
-        },
-      },
-    ],
-    'comma-dangle': 'off',
     'no-undef': 'off',
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-await-expression-member': 'off',
-    'multiline-ternary': 'off',
     'security/detect-object-injection': 'off',
     'security/detect-non-literal-fs-filename': 'off',
     'unicorn/filename-case': [
@@ -85,7 +72,6 @@ module.exports = {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    semi: [0],
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': ['warn', { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' }],
     'dprint-integration/dprint': [
@@ -117,7 +103,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'standard',
-    'plugin:security/recommended',
+    'plugin:security/recommended-legacy',
     'plugin:react/recommended',
     'plugin:unicorn/recommended',
     'standard-with-typescript',
