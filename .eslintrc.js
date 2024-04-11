@@ -48,6 +48,8 @@ module.exports = {
         checksVoidReturn: false,
       },
     ],
+    'unicorn/prefer-dom-node-text-content': 'off',
+    'unicorn/prefer-modern-dom-apis': 'off',
     'react/react-in-jsx-scope': 'off',
     'security-node/detect-unhandled-async-errors': 'off',
     'unicorn/prefer-node-protocol': 'off',
