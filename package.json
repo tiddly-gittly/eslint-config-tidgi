@@ -1,14 +1,15 @@
 {
   "name": "eslint-config-tidgi",
-  "version": "2.0.0",
+  "version": "1.2.3",
   "description": "Eslint config fot TidGi and its plugins, with many eslint plugins to perform auto-fix.",
-  "license": "MIT",
   "homepage": "https://github.com/tiddly-gittly/eslint-config-tidgi",
+  "bugs": "https://github.com/tiddly-gittly/eslint-config-tidgi/issues",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tiddly-gittly/eslint-config-tidgi"
   },
-  "bugs": "https://github.com/tiddly-gittly/eslint-config-tidgi/issues",
+  "license": "MIT",
   "keywords": [
     "eslint",
     "tiddlywiki",
@@ -17,22 +18,39 @@
     "tiddlywiki5",
     "typescript"
   ],
-  "main": "index.js",
   "scripts": {
-    "check": "eslint-find-rules --unused index.js",
-    "update": "npm-check-updates -u && dprint config update"
+    "check": "eslint-find-rules --unused index.js"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "7.1.0",
+    "@typescript-eslint/parser": "7.1.0",
+    "dprint": "^0.45.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-config-standard-with-typescript": "43.0.1",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-autofix": "^1.1.0",
+    "eslint-plugin-dprint-integration": "^0.3.0",
+    "eslint-plugin-html": "8.0.0",
+    "eslint-plugin-import": "npm:eslint-plugin-i@2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-security": "2.1.1",
+    "eslint-plugin-security-node": "1.1.4",
+    "eslint-plugin-typescript-sort-keys": "3.2.0",
+    "eslint-plugin-unicorn": "51.0.1",
+    "eslint-plugin-unused-imports": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint-find-rules": "^4.1.0",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "@antfu/eslint-config": "^4.11.0",
-    "@modern-js/tsconfig": "^2.66.0",
-    "eslint": "^9.23.0"
-  },
-  "devDependencies": {
-    "npm-check-updates": "^17.1.16",
-    "typescript": "^5.8.2"
   },
   "pnpm": {
     "overrides": {
@@ -42,10 +60,7 @@
       "allowedVersions": {
         "eslint": "$eslint"
       }
-    },
-    "onlyBuiltDependencies": [
-      "dprint"
-    ]
+    }
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
