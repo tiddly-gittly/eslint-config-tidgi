@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
 import eslint from '@eslint/js';
 import format from 'eslint-plugin-format';
 import importPlugin from 'eslint-plugin-import';
@@ -9,6 +11,9 @@ import typescriptSortKeys from 'eslint-plugin-typescript-sort-keys';
 import unicornPlugin from 'eslint-plugin-unicorn';
 import unusedImports from 'eslint-plugin-unused-imports';
 import tseslint from 'typescript-eslint';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const tseslintConfig = tseslint.config(
   eslint.configs.recommended,
@@ -24,9 +29,9 @@ const tseslintConfig = tseslint.config(
       parser: tseslint.parser,
       parserOptions: {
         projectService: {
-          allowDefaultProject: ['*.js'],
+          allowDefaultProject: ['*.js', '*.mjs'],
         },
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: __dirname,
         ecmaFeatures: {
           jsx: true,
         },
@@ -102,6 +107,18 @@ const tseslintConfig = tseslint.config(
       '@typescript-eslint/explicit-function-return-type': 'off',
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': ['warn', { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
       '@typescript-eslint/consistent-type-imports': 'off',
       'unicorn/prefer-dom-node-remove': 'off',
       '@typescript-eslint/no-var-requires': 'off',
@@ -128,6 +145,7 @@ export default [
       reportUnusedDisableDirectives: true,
     },
     ignores: [
+      'wiki/',
       'resources/',
       'settings-dev/',
       'out/',
