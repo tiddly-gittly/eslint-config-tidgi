@@ -1,5 +1,3 @@
-const pluginSecurity = require('eslint-plugin-security');
-
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -7,6 +5,8 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
+    project: './tsconfig.eslint.json',
+  tsconfigRootDir: __dirname,
   },
   settings: {
     react: {
@@ -79,23 +79,13 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': ['warn', { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' }],
-    'dprint-integration/dprint': [
-      'warn',
-      // Global Config (will pass to the dprint formatter directly): Available at https://dprint.dev/config/
-      {
-        useDprintJson: true,
-      },
-      // Plugin Specific Config (will pass to the dprint plugins): Available at https://dprint.dev/plugins/
-      {
-        useDprintJson: true,
-      },
-    ],
     // conflict with dprint-integration/dprint, will make some line disappear, and some line duplicated
     '@typescript-eslint/consistent-type-imports': 'off',
     // in tw env, only `domNode?.parentNode?.removeChild(domNode);` will work, if use `domNode?.remove()`, it will throw error in tw env
     'unicorn/prefer-dom-node-remove': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     'unicorn/no-useless-undefined': 'off',
+    // 'format/dprint': ['error', { language: 'ts', languageOptions: { indentWidth: 2 } }],
   },
   overrides: [
     {
@@ -119,14 +109,13 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:react-hooks/recommended',
-    'plugin:dprint-integration/recommended',
-    'plugin:dprint-integration/disable-conflict',
+    // 'plugin:dprint-integration/disable-conflict',
     'plugin:security-node/recommended',
     'plugin:typescript-sort-keys/recommended',
   ],
   plugins: [
     '@typescript-eslint/eslint-plugin',
-    'dprint-integration',
+    'format',
     'react',
     'html',
     'typescript-sort-keys',

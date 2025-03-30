@@ -46,7 +46,9 @@
     "eslint-plugin-unused-imports": "^3.1.0"
   },
   "devDependencies": {
+    "@modern-js/tsconfig": "^2.66.0",
     "eslint-find-rules": "^4.1.0",
+    "eslint-plugin-format": "^1.0.1",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
@@ -60,7 +62,10 @@
       "allowedVersions": {
         "eslint": "$eslint"
       }
-    }
+    },
+    "onlyBuiltDependencies": [
+      "dprint"
+    ]
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
