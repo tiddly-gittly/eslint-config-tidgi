@@ -1,11 +1,17 @@
 {
   "extends": "@modern-js/tsconfig/base.json",
   "compilerOptions": {
-    "declaration": false,
     "jsx": "react-jsx",
     "baseUrl": "./",
+    "noEmit": true,
     "typeRoots": ["node_modules/@types", "node_modules/tw5-typed"],
+    "module": "esnext",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
     "lib": ["DOM", "ESNext"]
   },
-  "include": ["src"]
+  "include": ["src", "*.json", "*.mjs", "*.js", "eslint.config.ts", "index.ts"]
 }

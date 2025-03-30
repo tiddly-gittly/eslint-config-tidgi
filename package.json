@@ -1,10 +1,9 @@
 {
   "name": "eslint-config-tidgi",
-  "version": "2.0.4",
+  "version": "2.0.6",
   "description": "Eslint config fot TidGi and its plugins, with many eslint plugins to perform auto-fix.",
   "homepage": "https://github.com/tiddly-gittly/eslint-config-tidgi",
   "bugs": "https://github.com/tiddly-gittly/eslint-config-tidgi/issues",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tiddly-gittly/eslint-config-tidgi"
@@ -18,8 +17,11 @@
     "tiddlywiki5",
     "typescript"
   ],
+  "type": "module",
   "scripts": {
     "update": "npm-check-updates -u && dprint config update",
+    "build": "tsc ./eslint.config.ts --module NodeNext --moduleResolution nodenext --declaration --esModuleInterop --skipLibCheck",
+    "prepublishOnly": "npm run build",
     "check": "eslint-find-rules --unused index.js"
   },
   "dependencies": {
@@ -34,10 +36,10 @@
     "eslint-import-resolver-typescript": "4.3.1",
     "eslint-plugin-autofix": "^2.2.0",
     "eslint-plugin-dprint-integration": "^0.3.0",
+    "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-html": "8.1.2",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-n": "^17.17.0",
-    "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-react": "7.37.4",
@@ -51,6 +53,7 @@
   },
   "devDependencies": {
     "@modern-js/tsconfig": "^2.66.0",
+    "@types/node": "^22.13.14",
     "eslint-find-rules": "^5.0.0",
     "npm-check-updates": "^17.1.16",
     "typescript": "^5.8.2"
@@ -75,15 +78,15 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "type": "module",
   "files": [
-    "index.js",
     "eslint.config.js",
+    "eslint.config.d.ts",
     "tsconfig.json",
     "tsconfig.eslint.json",
     "dprint.json"
   ],
+  "main": "eslint.config.js",
   "exports": {
-    ".": "./index.js"
+    ".": "./eslint.config.js"
   }
 }
