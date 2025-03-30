@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tidgi",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Eslint config fot TidGi and its plugins, with many eslint plugins to perform auto-fix.",
   "homepage": "https://github.com/tiddly-gittly/eslint-config-tidgi",
   "bugs": "https://github.com/tiddly-gittly/eslint-config-tidgi/issues",
@@ -76,7 +76,11 @@
   },
   "type": "module",
   "files": [
-    "index.js"
+    "index.js",
+    "eslint.config.js",
+    "tsconfig.json",
+    "tsconfig.eslint.json",
+    "dprint.json"
   ],
   "exports": {
     ".": "./index.js"
