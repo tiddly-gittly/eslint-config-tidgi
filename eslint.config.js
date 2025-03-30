@@ -14,7 +14,7 @@ import tseslint from 'typescript-eslint';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const tseslintConfig = tseslint.config(eslint.configs.recommended, tseslint.configs.recommendedTypeChecked, tseslint.configs.strictTypeChecked, {
-    files: ['**/*.json', '**/*.md'],
+    files: ['**/*.json', '**/tiddlywiki.info', '**/*.md', 'wiki/tiddlers/**/*.json'],
     extends: [tseslint.configs.disableTypeChecked],
 }, {
     files: ['**/*.{js,jsx,ts,tsx}'],
@@ -22,7 +22,7 @@ const tseslintConfig = tseslint.config(eslint.configs.recommended, tseslint.conf
         parser: tseslint.parser,
         parserOptions: {
             projectService: {
-                allowDefaultProject: ['*.js', '*.mjs'],
+                allowDefaultProject: ['./*.js', './*.mjs'],
             },
             tsconfigRootDir: __dirname,
             ecmaFeatures: {
@@ -154,8 +154,8 @@ export default [
     ...tseslintConfig,
     // JSON 文件配置
     {
-        files: ['**/*.json', 'wiki/tiddlywiki.info'],
-        ignores: ['package-lock.json', 'wiki/tiddlers/'],
+        files: ['**/*.json', '**/tiddlywiki.info'],
+        ignores: ['package-lock.json', 'wiki/tiddlers/**/*.json'],
         plugins: { format },
         languageOptions: {
             parser: format.parserPlain,
@@ -184,7 +184,7 @@ export default [
     // DPrint TypeScript/JavaScript 格式化配置
     {
         files: ['**/*.{mjs,js,jsx,ts,tsx}'],
-        ignores: ['wiki/tiddlers/'],
+        ignores: ['wiki/tiddlers/**/*.js'],
         plugins: { format },
         rules: {
             'format/dprint': ['error', {
