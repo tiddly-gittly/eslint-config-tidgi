@@ -124,6 +124,8 @@ const tseslintConfig = tseslint.config(
       'unicorn/prefer-dom-node-remove': 'off',
       '@typescript-eslint/no-var-requires': 'off',
       'unicorn/no-useless-undefined': 'off',
+      /** Allow `declare var exports` for start-up modules. */
+      'no-var': 'off',
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
