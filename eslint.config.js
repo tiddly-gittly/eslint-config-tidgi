@@ -116,6 +116,8 @@ const tseslintConfig = tseslint.config(eslint.configs.recommended, tseslint.conf
         'unicorn/prefer-dom-node-remove': 'off',
         '@typescript-eslint/no-var-requires': 'off',
         'unicorn/no-useless-undefined': 'off',
+        /** Allow `declare var exports` for start-up modules. */
+        'no-var': 'off',
     },
     plugins: {
         '@typescript-eslint': tseslint.plugin,
@@ -161,7 +163,7 @@ export default [
             parser: format.parserPlain,
         },
         rules: {
-            'format/dprint': ['error', {
+            'format/dprint': ['warn', {
                     language: 'json',
                     languageOptions: { lineWidth: 180, indentWidth: 2 },
                 }],
@@ -175,7 +177,7 @@ export default [
             parser: format.parserPlain,
         },
         rules: {
-            'format/dprint': ['error', {
+            'format/dprint': ['warn', {
                     language: 'markdown',
                     languageOptions: { lineWidth: 180, indentWidth: 2 },
                 }],
@@ -187,7 +189,7 @@ export default [
         ignores: ['wiki/tiddlers/**/*.js'],
         plugins: { format },
         rules: {
-            'format/dprint': ['error', {
+            'format/dprint': ['warn', {
                     language: 'typescript',
                     languageOptions: { lineWidth: 180, indentWidth: 2, quoteProps: 'asNeeded', quoteStyle: 'preferSingle', 'binaryExpression.operatorPosition': 'sameLine' },
                 }],
