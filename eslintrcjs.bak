@@ -85,7 +85,7 @@ module.exports = {
     'unicorn/prefer-dom-node-remove': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     'unicorn/no-useless-undefined': 'off',
-    // 'format/dprint': ['error', { language: 'ts', languageOptions: { indentWidth: 2 } }],
+    'format/dprint': ['error', { language: 'ts', languageOptions: { indentWidth: 2 } }],
   },
   overrides: [
     {
@@ -111,7 +111,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     // 'plugin:dprint-integration/disable-conflict',
     'plugin:security-node/recommended',
-    'plugin:typescript-sort-keys/recommended',
+  'plugin:typescript-sort-keys/recommended',
   ],
   plugins: [
     '@typescript-eslint/eslint-plugin',

@@ -1,12 +1,4 @@
 {
-  "lineWidth": 180,
-  "typescript": {
-    "quoteProps": "asNeeded",
-    "quoteStyle": "preferSingle",
-    "binaryExpression.operatorPosition": "sameLine"
-  },
-  "json": {},
-  "markdown": {},
   "includes": [
     "**/*.{ts,tsx,js,jsx,cjs,mjs,json,md}",
     "./*.json",
