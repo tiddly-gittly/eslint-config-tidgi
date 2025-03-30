@@ -127,6 +127,19 @@ export default [
     linterOptions: {
       reportUnusedDisableDirectives: true,
     },
+    ignores: [
+      'resources/',
+      'settings-dev/',
+      'out/',
+      'logs/',
+      'template/',
+      '.webpack/',
+      'node_modules/',
+      'localization/',
+      'build-resources/',
+      '.vscode/',
+      '.github/',
+    ],
   },
 
   // TypeScript/JavaScript 配置
