@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tidgi",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Eslint config fot TidGi and its plugins, with many eslint plugins to perform auto-fix.",
   "homepage": "https://github.com/tiddly-gittly/eslint-config-tidgi",
   "bugs": "https://github.com/tiddly-gittly/eslint-config-tidgi/issues",
@@ -23,6 +23,7 @@
     "check": "eslint-find-rules --unused index.js"
   },
   "dependencies": {
+    "@eslint/js": "^9.23.0",
     "@typescript-eslint/eslint-plugin": "8.28.0",
     "@typescript-eslint/parser": "8.28.0",
     "dprint": "^0.49.1",
@@ -36,6 +37,7 @@
     "eslint-plugin-html": "8.1.2",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-n": "^17.17.0",
+    "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-react": "7.37.4",
@@ -50,7 +52,6 @@
   "devDependencies": {
     "@modern-js/tsconfig": "^2.66.0",
     "eslint-find-rules": "^5.0.0",
-    "eslint-plugin-format": "^1.0.1",
     "npm-check-updates": "^17.1.16",
     "typescript": "^5.8.2"
   },

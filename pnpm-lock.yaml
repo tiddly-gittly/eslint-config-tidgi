@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      '@eslint/js':
+        specifier: ^9.23.0
+        version: 9.23.0
       '@typescript-eslint/eslint-plugin':
         specifier: 8.28.0
         version: 8.28.0(@typescript-eslint/parser@8.28.0(eslint@9.23.0)(typescript@5.8.2))(eslint@9.23.0)(typescript@5.8.2)
@@ -41,6 +44,9 @@ importers:
       eslint-plugin-dprint-integration:
         specifier: ^0.3.0
         version: 0.3.0
+      eslint-plugin-format:
+        specifier: ^1.0.1
+        version: 1.0.1(eslint@9.23.0)
       eslint-plugin-html:
         specifier: 8.1.2
         version: 8.1.2
@@ -87,9 +93,6 @@ importers:
       eslint-find-rules:
         specifier: ^5.0.0
         version: 5.0.0(eslint@9.23.0)
-      eslint-plugin-format:
-        specifier: ^1.0.1
-        version: 1.0.1(eslint@9.23.0)
       npm-check-updates:
         specifier: ^17.1.16
         version: 17.1.16
