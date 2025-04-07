@@ -126,6 +126,12 @@ const tseslintConfig = tseslint.config(
       'unicorn/no-useless-undefined': 'off',
       /** Allow `declare var exports` for start-up modules. */
       'no-var': 'off',
+      "@typescript-eslint/restrict-template-expressions": [
+        "error",
+        {
+          allowNumber: true,
+        },
+      ],
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
