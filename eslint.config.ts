@@ -1,5 +1,5 @@
-import type { Linter } from "eslint";
 import eslint from '@eslint/js';
+import type { Linter } from 'eslint';
 import format from 'eslint-plugin-format';
 import importPlugin from 'eslint-plugin-import';
 import reactPlugin from 'eslint-plugin-react';
@@ -126,8 +126,8 @@ const tseslintConfig = tseslint.config(
       'unicorn/no-useless-undefined': 'off',
       /** Allow `declare var exports` for start-up modules. */
       'no-var': 'off',
-      "@typescript-eslint/restrict-template-expressions": [
-        "error",
+      '@typescript-eslint/restrict-template-expressions': [
+        'error',
         {
           allowNumber: true,
         },
