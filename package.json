@@ -22,6 +22,7 @@
     "update": "npm-check-updates -u && dprint config update",
     "build": "tsc ./eslint.config.ts --module NodeNext --moduleResolution nodenext --declaration --esModuleInterop --skipLibCheck",
     "prepublishOnly": "npm run build",
+    "lint": "eslint ./src --ext js,ts,tsx,json",
     "check": "eslint-find-rules --unused index.js"
   },
   "dependencies": {
@@ -55,6 +56,7 @@
     "@modern-js/tsconfig": "^2.66.0",
     "@types/node": "^22.13.14",
     "eslint-find-rules": "^5.0.0",
+    "jiti": "^2.4.2",
     "npm-check-updates": "^17.1.16",
     "typescript": "^5.8.2"
   },

@@ -185,6 +185,8 @@ export default [
         language: 'json',
         languageOptions: { lineWidth: 180, indentWidth: 2 },
       }],
+      '@typescript-eslint/no-unnecessary-condition': 'off',
+      '@typescript-eslint/require-await': 'off',
     },
   },
 
@@ -200,6 +202,8 @@ export default [
         language: 'markdown',
         languageOptions: { lineWidth: 180, indentWidth: 2 },
       }],
+      '@typescript-eslint/no-unnecessary-condition': 'off',
+      '@typescript-eslint/require-await': 'off',
     },
   },
 
