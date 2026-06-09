@@ -1,11 +1,14 @@
 {
   "extends": "@modern-js/tsconfig/base.json",
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "jsx": "react-jsx",
     "baseUrl": "./",
     "noEmit": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "typeRoots": ["node_modules/@types", "node_modules/tw5-typed"],
-    "module": "esnext",
+    "types": ["node"],
     "declaration": true,
     "emitDeclarationOnly": true,
     "esModuleInterop": true,

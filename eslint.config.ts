@@ -6,7 +6,6 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import securityPlugin from 'eslint-plugin-security';
 import securityNodePlugin from 'eslint-plugin-security-node';
-import typescriptSortKeys from 'eslint-plugin-typescript-sort-keys';
 import unicornPlugin from 'eslint-plugin-unicorn';
 import unusedImports from 'eslint-plugin-unused-imports';
 import { dirname } from 'node:path';
@@ -40,7 +39,7 @@ const tseslintConfig = tseslint.config(
     },
     settings: {
       react: {
-        version: '18.2.0',
+        version: 'detect',
       },
       'import/parsers': {
         '@typescript-eslint/parser': ['.ts', '.tsx'],
@@ -142,7 +141,6 @@ const tseslintConfig = tseslint.config(
       security: securityPlugin,
       'security-node': securityNodePlugin,
       'unused-imports': unusedImports,
-      'typescript-sort-keys': typescriptSortKeys,
     },
   },
 );
