@@ -1,8 +1,8 @@
 import eslint from '@eslint/js';
 import type { Linter } from 'eslint';
 import format from 'eslint-plugin-format';
-import importPlugin from 'eslint-plugin-import';
-import reactPlugin from 'eslint-plugin-react';
+import importPlugin from 'eslint-plugin-import-x';
+import reactPlugin from '@eslint-react/eslint-plugin';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import securityPlugin from 'eslint-plugin-security';
 import securityNodePlugin from 'eslint-plugin-security-node';
@@ -38,13 +38,10 @@ const tseslintConfig = tseslint.config(
       },
     },
     settings: {
-      react: {
-        version: 'detect',
-      },
-      'import/parsers': {
+      'import-x/parsers': {
         '@typescript-eslint/parser': ['.ts', '.tsx'],
       },
-      'import/resolver': {
+      'import-x/resolver': {
         node: {
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
@@ -54,7 +51,7 @@ const tseslintConfig = tseslint.config(
       },
     },
     rules: {
-      'import/no-unresolved': [2, { ignore: ['\\$:/'] }],
+      'import-x/no-unresolved': [2, { ignore: ['\\$:/'] }],
       'unicorn/prevent-abbreviations': [
         'error',
         {
@@ -78,7 +75,7 @@ const tseslintConfig = tseslint.config(
       ],
       'unicorn/prefer-dom-node-text-content': 'off',
       'unicorn/prefer-modern-dom-apis': 'off',
-      'react/react-in-jsx-scope': 'off',
+      '@eslint-react/react-in-jsx-scope': 'off',
       'security-node/detect-unhandled-async-errors': 'off',
       'unicorn/prefer-node-protocol': 'off',
       'unicorn/prefer-module': 'off',
@@ -134,9 +131,9 @@ const tseslintConfig = tseslint.config(
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
-      react: reactPlugin,
+      '@eslint-react': reactPlugin,
       unicorn: unicornPlugin,
-      import: importPlugin,
+      'import-x': importPlugin,
       'react-hooks': reactHooksPlugin,
       security: securityPlugin,
       'security-node': securityNodePlugin,
